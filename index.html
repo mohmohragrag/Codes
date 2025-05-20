@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>حساب وزن العناصر الإنشائية</title>
+</head>
+<body>
+  <h1>حساب وزن العناصر الإنشائية</h1>
+  <form id="weightForm">
+    <!-- الأعمدة الرئيسية -->
+    <fieldset>
+      <legend>الأعمدة الرئيسية</legend>
+      <label>عدد الأعمدة: <input type="number" name="main_columns_count" min="0" required></label>
+      <h4>فلانشة 1</h4>
+      <label>الطول (سم): <input type="number" name="main_columns_flange1_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="main_columns_flange1_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="main_columns_flange1_thickness" step="0.01" required></label>
+      <h4>فلانشة 2</h4>
+      <label>الطول (سم): <input type="number" name="main_columns_flange2_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="main_columns_flange2_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="main_columns_flange2_thickness" step="0.01" required></label>
+      <h4>ويب</h4>
+      <label>الطول (سم): <input type="number" name="main_columns_web_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="main_columns_web_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="main_columns_web_thickness" step="0.01" required></label>
+    </fieldset>
+
+    <!-- الأعمدة الوسط -->
+    <fieldset>
+      <legend>الأعمدة الوسط</legend>
+      <label>عدد الأعمدة: <input type="number" name="middle_columns_count" min="0" required></label>
+      <h4>فلانشة 1</h4>
+      <label>الطول (سم): <input type="number" name="middle_columns_flange1_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="middle_columns_flange1_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="middle_columns_flange1_thickness" step="0.01" required></label>
+      <h4>فلانشة 2</h4>
+      <label>الطول (سم): <input type="number" name="middle_columns_flange2_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="middle_columns_flange2_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="middle_columns_flange2_thickness" step="0.01" required></label>
+      <h4>ويب</h4>
+      <label>الطول (سم): <input type="number" name="middle_columns_web_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="middle_columns_web_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="middle_columns_web_thickness" step="0.01" required></label>
+    </fieldset>
+
+    <!-- الأعمدة الوجهة -->
+    <fieldset>
+      <legend>الأعمدة الوجهة</legend>
+      <label>عدد الأعمدة: <input type="number" name="face_columns_count" min="0" required></label>
+      <h4>فلانشة 1</h4>
+      <label>الطول (سم): <input type="number" name="face_columns_flange1_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="face_columns_flange1_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="face_columns_flange1_thickness" step="0.01" required></label>
+      <h4>فلانشة 2</h4>
+      <label>الطول (سم): <input type="number" name="face_columns_flange2_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="face_columns_flange2_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="face_columns_flange2_thickness" step="0.01" required></label>
+      <h4>ويب</h4>
+      <label>الطول (سم): <input type="number" name="face_columns_web_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="face_columns_web_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="face_columns_web_thickness" step="0.01" required></label>
+    </fieldset>
+
+    <!-- الرافترات الطيارة -->
+    <fieldset>
+      <legend>الرافترات الطيارة (قبل السلبة)</legend>
+      <label>عدد الرافترات: <input type="number" name="rafters_flying_count" min="0" required></label>
+      <h4>فلانشة 1</h4>
+      <label>الطول (سم): <input type="number" name="rafters_flying_flange1_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_flying_flange1_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_flying_flange1_thickness" step="0.01" required></label>
+      <h4>فلانشة 2</h4>
+      <label>الطول (سم): <input type="number" name="rafters_flying_flange2_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_flying_flange2_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_flying_flange2_thickness" step="0.01" required></label>
+      <h4>ويب</h4>
+      <label>الطول (سم): <input type="number" name="rafters_flying_web_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_flying_web_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_flying_web_thickness" step="0.01" required></label>
+    </fieldset>
+
+    <!-- الرافترات العدل -->
+    <fieldset>
+      <legend>الرافترات العدل</legend>
+      <label>عدد الرافترات: <input type="number" name="rafters_level_count" min="0" required></label>
+      <h4>فلانشة 1</h4>
+      <label>الطول (سم): <input type="number" name="rafters_level_flange1_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_level_flange1_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_level_flange1_thickness" step="0.01" required></label>
+      <h4>فلانشة 2</h4>
+      <label>الطول (سم): <input type="number" name="rafters_level_flange2_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_level_flange2_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_level_flange2_thickness" step="0.01" required></label>
+      <h4>ويب</h4>
+      <label>الطول (سم): <input type="number" name="rafters_level_web_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_level_web_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_level_web_thickness" step="0.01" required></label>
+    </fieldset>
+
+    <!-- الرافترات الطيارة بعد السلبة -->
+    <fieldset>
+      <legend>الرافترات الطيارة بعد السلبة</legend>
+      <label>عدد الرافترات: <input type="number" name="rafters_flying_after_count" min="0" required></label>
+      <h4>فلانشة 1</h4>
+      <label>الطول (سم): <input type="number" name="rafters_flying_after_flange1_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_flying_after_flange1_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_flying_after_flange1_thickness" step="0.01" required></label>
+      <h4>فلانشة 2</h4>
+      <label>الطول (سم): <input type="number" name="rafters_flying_after_flange2_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_flying_after_flange2_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_flying_after_flange2_thickness" step="0.01" required></label>
+      <h4>ويب</h4>
+      <label>الطول (سم): <input type="number" name="rafters_flying_after_web_length" step="0.01" required></label>
+      <label>العرض (سم): <input type="number" name="rafters_flying_after_web_width" step="0.01" required></label>
+      <label>السماكة (سم): <input type="number" name="rafters_flying_after_web_thickness" step="0.01" required></label>
+    </fieldset>
+
+    <button type="submit">احسب الوزن</button>
+  </form>
+
+  <div id="results"></div>
+</body>
+</html>
